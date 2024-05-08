@@ -1,5 +1,5 @@
 /// <reference path="../objectid.d.ts" />
-import ObjectID from '../objectid';
+import ObjectId from '../objectid';
 
 // ----------------------------------------------------------------------------
 // setup test data
@@ -12,7 +12,7 @@ const idString:string = "TIZÙLG!íçm";
 
 // ----------------------------------------------------------------------------
 // should construct with no arguments
-let oid = new ObjectID();
+let oid = new ObjectId();
 
 // ----------------------------------------------------------------------------
 // should have an `id` property
@@ -24,35 +24,35 @@ oid.str;
 
 // ----------------------------------------------------------------------------
 // should construct with a `time` argument
-oid = new ObjectID(time);
+oid = new ObjectId(time);
 
 // ----------------------------------------------------------------------------
 // should construct with an `array` argument
-oid = new ObjectID(array);
+oid = new ObjectId(array);
 
 // ----------------------------------------------------------------------------
 // should construct with a `buffer` argument
-oid = new ObjectID(buffer);
+oid = new ObjectId(buffer);
 
 // ----------------------------------------------------------------------------
 // should construct with a `hexString` argument
-oid = new ObjectID(hexString);
+oid = new ObjectId(hexString);
 
 // ----------------------------------------------------------------------------
 // should construct with a `idString` argument
-oid = new ObjectID(idString);
+oid = new ObjectId(idString);
 
 // ----------------------------------------------------------------------------
-// should construct with `ObjectID.createFromTime(time)` and should have 0's at the end
-oid = ObjectID.createFromTime(time);
+// should construct with `ObjectId.createFromTime(time)` and should have 0's at the end
+oid = ObjectId.createFromTime(time);
 
 // ----------------------------------------------------------------------------
-// should construct with `ObjectID.createFromHexString(hexString)`
-oid = ObjectID.createFromHexString(hexString);
+// should construct with `ObjectId.createFromHexString(hexString)`
+oid = ObjectId.createFromHexString(hexString);
 
 // ----------------------------------------------------------------------------
 // should construct with no arguments
-oid = ObjectID();
+oid = ObjectId();
 
 // ----------------------------------------------------------------------------
 // should have an `id` property
@@ -64,23 +64,23 @@ oid.str;
 
 // ----------------------------------------------------------------------------
 // should construct with a `time` argument
-oid = ObjectID(time);
+oid = ObjectId(time);
 
 // ----------------------------------------------------------------------------
 // should construct with an `array` argument
-oid = ObjectID(array);
+oid = ObjectId(array);
 
 // ----------------------------------------------------------------------------
 // should construct with a `buffer` argument
-oid = ObjectID(buffer);
+oid = ObjectId(buffer);
 
 // ----------------------------------------------------------------------------
 // should construct with a `hexString` argument
-oid = ObjectID(hexString);
+oid = ObjectId(hexString);
 
 // ----------------------------------------------------------------------------
 // should construct with a `idString` argument
-oid = ObjectID(idString);
+oid = ObjectId(idString);
 
 // ----------------------------------------------------------------------------
 // should correctly retrieve timestamp
@@ -88,11 +88,11 @@ const timestamp:Date = oid.getTimestamp();
 
 // ----------------------------------------------------------------------------
 // should validate valid hex strings
-let isValid:boolean = ObjectID.isValid(hexString);
+let isValid:boolean = ObjectId.isValid(hexString);
 
 // ----------------------------------------------------------------------------
-// should validate legit ObjectID objects
-isValid = ObjectID.isValid(oid);
+// should validate legit ObjectId objects
+isValid = ObjectId.isValid(oid);
 
 // ----------------------------------------------------------------------------
 // should invalidate bad strings
@@ -100,8 +100,8 @@ isValid = ObjectID.isValid(oid);
 
 // ----------------------------------------------------------------------------
 // should evaluate equality with .equals()
-const id1 = new ObjectID();
-const id2 = new ObjectID(id1.str);
+const id1 = new ObjectId();
+const id2 = new ObjectId(id1.str);
 const equals:boolean = id1.equals(id2);
 
 // ----------------------------------------------------------------------------
@@ -113,7 +113,7 @@ const equals:boolean = id1.equals(id2);
 // not necessary for typescript
 
 // ----------------------------------------------------------------------------
-// should convert to a hex string for ObjectID.toString()
+// should convert to a hex string for ObjectId.toString()
 const toStr:string = oid.toString();
 
 // ----------------------------------------------------------------------------

@@ -1,37 +1,35 @@
-import {Buffer} from 'buffer';
+export default ObjectId
 
-export default ObjectID
+declare const ObjectId: ObjectIdCtor;
 
-declare const ObjectID: ObjectIDCtor;
-
-declare interface ObjectID {
+declare interface ObjectId {
   readonly id: string;
   readonly str: string;
 
   toHexString(): string;
-  equals(other: ObjectID): boolean;
+  equals(other: ObjectId): boolean;
   getTimestamp(): Date;
 }
 
-declare interface ObjectIDCtor {
-  (): ObjectID
-  (time: number): ObjectID
-  (hexString: string): ObjectID
-  (idString: string): ObjectID
-  (array: number[]): ObjectID
-  (buffer: Buffer): ObjectID
+declare interface ObjectIdCtor {
+  (): ObjectId
+  (time: number): ObjectId
+  (hexString: string): ObjectId
+  (idString: string): ObjectId
+  (array: number[]): ObjectId
+  (buffer: Buffer): ObjectId
 
-  new(): ObjectID
-  new(time: number): ObjectID
-  new(hexString: string): ObjectID
-  new(idString: string): ObjectID
-  new(array: number[]): ObjectID
-  new(buffer: Buffer): ObjectID
+  new(): ObjectId
+  new(time: number): ObjectId
+  new(hexString: string): ObjectId
+  new(idString: string): ObjectId
+  new(array: number[]): ObjectId
+  new(buffer: Buffer): ObjectId
 
 
-  createFromTime(time: number): ObjectID;
-  createFromHexString(hexString: string): ObjectID;
+  createFromTime(time: number): ObjectId;
+  createFromHexString(hexString: string): ObjectId;
   isValid(hexString: string): boolean;
-  isValid(ObjectID: ObjectID): boolean;
+  isValid(ObjectId: ObjectId): boolean;
   toString(): string;
 }

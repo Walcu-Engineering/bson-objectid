@@ -16,7 +16,7 @@
     "url": "https://github.com/williamkapke/bson-objectid.git"
   },
   "keywords": [
-    "ObjectID",
+    "ObjectId",
     "mongo",
     "mongodb",
     "bson",
