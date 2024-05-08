@@ -1,7 +1,7 @@
-BSON ObjectID &nbsp;[![Build Status](https://travis-ci.org/williamkapke/bson-objectid.svg?branch=master)](https://travis-ci.org/williamkapke/bson-objectid)
+BSON ObjectId &nbsp;[![Build Status](https://travis-ci.org/williamkapke/bson-objectid.svg?branch=master)](https://travis-ci.org/williamkapke/bson-objectid)
 =============
 
-This module allows you to create and parse `ObjectID`s without a reference to the
+This module allows you to create and parse `ObjectId`s without a reference to the
 [mongodb](https://github.com/mongodb/node-mongodb-native) or [bson](https://github.com/mongodb/js-bson)
 modules.
 
@@ -13,17 +13,17 @@ public API implementation (found here: https://github.com/mongodb/js-bson/blob/m
 
 ## Usage
 ```javascript
-var ObjectID = require("bson-objectid");
+var ObjectId = require("bson-objectid");
 
-console.log(ObjectID());
-console.log(ObjectID("54495ad94c934721ede76d90"));
-console.log(ObjectID(1414093117));//time
-console.log(ObjectID([ 84, 73, 90, 217, 76, 147, 71, 33, 237, 231, 109, 144 ]));
-console.log(ObjectID(new Buffer([ 84, 73, 90, 217, 76, 147, 71, 33, 237, 231, 109, 144 ])));
+console.log(ObjectId());
+console.log(ObjectId("54495ad94c934721ede76d90"));
+console.log(ObjectId(1414093117));//time
+console.log(ObjectId([ 84, 73, 90, 217, 76, 147, 71, 33, 237, 231, 109, 144 ]));
+console.log(ObjectId(new Buffer([ 84, 73, 90, 217, 76, 147, 71, 33, 237, 231, 109, 144 ])));
 ```
 
-### ObjectID()<br>ObjectID(time)<br>ObjectID(hexString)<br>ObjectID(idString)<br>ObjectID(array)<br>ObjectID(buffer)
-Creates a new immutable `ObjectID` instance based on the current system time.
+### ObjectId()<br>ObjectId(time)<br>ObjectId(hexString)<br>ObjectId(idString)<br>ObjectId(array)<br>ObjectId(buffer)
+Creates a new immutable `ObjectId` instance based on the current system time.
 
 Possible arguments:<br>
 **time** Constructs the instance based on the specified time (in seconds).<br>
@@ -37,21 +37,21 @@ Possible arguments:<br>
 
 #### str
 #### toHexString()
-**returns** the `ObjectID` represented as a 24 character hex string.
+**returns** the `ObjectId` represented as a 24 character hex string.
 
 #### equals(other)
-**returns** true if the `ObjectID`s represent the same underlying value. Otherwise false.
+**returns** true if the `ObjectId`s represent the same underlying value. Otherwise false.
 #### getTimestamp()
-**returns** the generation `Date` (accurate up to the second) that this `ObjectID` was generated.
+**returns** the generation `Date` (accurate up to the second) that this `ObjectId` was generated.
 
-### ObjectID.createFromTime(time)
-Creates an ObjectID from a time (in seconds) `Number`, with the rest of the `ObjectID` zeroed out. Used for comparisons or sorting the ObjectID.
+### ObjectId.createFromTime(time)
+Creates an ObjectId from a time (in seconds) `Number`, with the rest of the `ObjectId` zeroed out. Used for comparisons or sorting the ObjectId.
 
-### ObjectID.createFromHexString(hexString)
-Creates an ObjectID from a 24 character hex string.
+### ObjectId.createFromHexString(hexString)
+Creates an ObjectId from a 24 character hex string.
 
-### ObjectID.isValid(hexString)<br>ObjectID.isValid(ObjectID)
-Checks if a value is a valid `ObjectID` or 24 character hex string.
+### ObjectId.isValid(hexString)<br>ObjectId.isValid(ObjectId)
+Checks if a value is a valid `ObjectId` or 24 character hex string.
 > THE NATIVE DOCUMENTATION ISN'T CLEAR ON THIS GUY!<br>
 > See: http://mongodb.github.io/node-mongodb-native/api-bson-generated/objectid.html#objectid-isvalid
 
