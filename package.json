@@ -29,7 +29,6 @@
   "homepage": "https://github.com/Walcu-Engineering/bson-objectid",
   "devDependencies": {
     "mocha": "^5.2.0",
-    "should": "^4.1.0",
-    "typescript": "^4.6.2"
+    "should": "^4.1.0"
   }
 }
